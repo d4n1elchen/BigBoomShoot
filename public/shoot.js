@@ -11,6 +11,7 @@ var shoots = ['shoot.gif', 'bigshoot.gif', 'spinshoot.gif', 'bigspinshoot.gif'];
 $(".high span").text("x"+shoot_count);
 
 shootBtn.click(function(){
+  ga('send', 'event', 'Shoot', 'click');
   var randomx = Math.floor(Math.random()*(window.innerWidth/10));
   var randomy = Math.floor(Math.random()*(window.innerHeight/15));
   // console.log(randomx+","+randomy);
