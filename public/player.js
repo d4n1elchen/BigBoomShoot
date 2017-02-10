@@ -6,7 +6,6 @@ song.type= 'audio/mpeg';
 song.src= 'chicken_attack.mp3';
 
 $('#seek').attr('max',song.duration);
-play();
 
 playBtn.click(function(e) {
   e.preventDefault();
@@ -16,6 +15,8 @@ playBtn.click(function(e) {
     pause();
   }
 });
+
+playBtn.click();
 
 song.addEventListener('timeupdate',function (){
   curtime = parseInt(song.currentTime, 10);

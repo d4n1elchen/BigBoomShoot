@@ -11,9 +11,10 @@ var shoots = ['shoot.gif', 'bigshoot.gif', 'spinshoot.gif', 'bigspinshoot.gif'];
 $(".high span").text("x"+shoot_count);
 
 shootBtn.click(function(){
-  var randomx = Math.floor(Math.random()*100);
-  var randomy = Math.floor(Math.random()*50);
-  parabola([50-randomx, randomy]);
+  var randomx = Math.floor(Math.random()*(window.innerWidth/10));
+  var randomy = Math.floor(Math.random()*(window.innerHeight/15));
+  console.log(randomx+","+randomy);
+  parabola([(window.innerWidth/20)-randomx, randomy]);
   socket.emit('shoot', 'hi');
 })
 
