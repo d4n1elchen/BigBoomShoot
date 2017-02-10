@@ -1,0 +1,24 @@
+{
+  "name": "bigboomshoot",
+  "version": "0.1.1",
+  "description": "Big! Boom! Shoot!",
+  "main": "server.js",
+  "scripts": {
+    "test": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/team6612/BigBoomShoot.git"
+  },
+  "author": "Daniel Chen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/team6612/BigBoomShoot/issues"
+  },
+  "homepage": "https://github.com/team6612/BigBoomShoot#readme",
+  "dependencies": {
+    "express": "^4.14.1",
+    "node-json-db": "^0.7.3",
+    "socket.io": "^1.7.2"
+  }
+}

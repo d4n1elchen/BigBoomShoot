@@ -5,37 +5,29 @@
     <title>大爆射</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <link rel="icon" href="/bigshoot.gif">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="playpause.css">
+    <link rel="stylesheet" type="text/css" href="http://csshake.surge.sh/csshake.min.css">
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <style>
-html {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
-
-body {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-#shoot {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  height: 50px;
-  width: 80px;
-}
-    </style>
   </head>
   <body>
     <button id="shoot">(´◓Д◔`)<br>(　っ c )</button>
-    <script>
-$("#shoot").click(function(){
-  var img = $("<img>").attr('src','bigshoot.gif').addClass('gif');
-  $("body").append(img);
-})
-    </script>
+    <div id="player">
+      <div class="play-pause play-pause__play" id="play"></div>
+      <input type="range" id="seek" value="0" max=""/>
+    </div>
+    <div id="counter">
+      <div class="high shake-constant shake-little blue">大爆射 <span>x1<span></div>
+      <div class="high shake-constant shake red">大爆射 <span>x1<span></div>
+      <div class="high shake-constant shake-hard green">大爆射 <span>x1<span></div>
+    </div>
+    <!-- <audio controls> -->
+    <!--   <source src="chicken_attack.mp3" type="audio/mpeg"> -->
+    <!-- </audio> -->
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script> var socket = io.connect('http://localhost:3000'); </script>
+    <script src="shoot.js"></script>
+    <script src="player.js"></script>
   </body>
 </html>
