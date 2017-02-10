@@ -13,7 +13,7 @@ $(".high span").text("x"+shoot_count);
 shootBtn.click(function(){
   var randomx = Math.floor(Math.random()*(window.innerWidth/10));
   var randomy = Math.floor(Math.random()*(window.innerHeight/15));
-  console.log(randomx+","+randomy);
+  // console.log(randomx+","+randomy);
   parabola([(window.innerWidth/20)-randomx, randomy]);
   socket.emit('shoot', 'hi');
 })

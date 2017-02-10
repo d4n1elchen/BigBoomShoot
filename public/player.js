@@ -22,7 +22,7 @@ song.addEventListener('timeupdate',function (){
   curtime = parseInt(song.currentTime, 10);
   $("#seek").val(curtime);
   $("#seek").css({
-    'background-image':'-webkit-linear-gradient(left ,rgba(0,0,0,.2) 0%,rgba(0,0,0,.2) '+curtime+'%,#fff '+curtime+'%, #fff 100%)'
+    'background-image':'-webkit-linear-gradient(left ,rgba(0,0,0,.2) 0%,rgba(0,0,0,.2) '+curtime*100/song.duration+'%,#fff '+curtime*100/song.duration+'%, #fff 100%)'
   });
 });
 
