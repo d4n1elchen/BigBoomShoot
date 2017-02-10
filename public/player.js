@@ -1,9 +1,9 @@
 playBtn = $('#play');
-song = new Audio('chicken_attack.mp3');
+song = new Audio('chicken_attack.ogg');
 duration = song.duration;
 
-song.type= 'audio/mpeg';
-song.src= 'chicken_attack.mp3';
+song.type= 'audio/ogg';
+song.src= 'chicken_attack.ogg';
 
 $('#seek').attr('max',song.duration);
 
