@@ -24,6 +24,11 @@ socket.on('shot', function (data) {
   $(".high span").text("x"+shoot_count);
 });
 
+socket.on('first shot', function (data) {
+  shoot_count = data;
+  $(".high span").text("x"+shoot_count);
+});
+
 function parabola(v) {
   var random = Math.floor(Math.random()*shoots.length);
   var src = shoots[random];
