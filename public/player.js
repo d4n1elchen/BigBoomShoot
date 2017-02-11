@@ -7,6 +7,15 @@ song.src= 'chicken_attack.ogg';
 
 $('#seek').attr('max',song.duration);
 
+firstPlay = true;
+song.onplay = function() {
+  firstPlay = false;
+}
+document.body.ontouchstart = function() {
+  document.body.ontouchstart=null;
+  if(firstPlay) play();
+}
+
 playBtn.click(function(e) {
   e.preventDefault();
   if(song.paused) {
@@ -15,7 +24,6 @@ playBtn.click(function(e) {
     pause();
   }
 });
-
 playBtn.click();
 
 song.addEventListener('timeupdate',function (){
