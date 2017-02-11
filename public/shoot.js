@@ -20,7 +20,6 @@ shootBtn.click(function(){
 })
 
 socket.on('shot', function (data) {
-  console.log("got shot!");
   shoot_count += data;
   $(".high span").text("x"+shoot_count);
 });
