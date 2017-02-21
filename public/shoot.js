@@ -17,6 +17,7 @@ shootBtn.click(function(){
   // console.log(randomx+","+randomy);
   parabola([(window.innerWidth/20)-randomx, randomy]);
   socket.emit('shoot', 'hi');
+  push();
 })
 
 socket.on('shot', function (data) {
