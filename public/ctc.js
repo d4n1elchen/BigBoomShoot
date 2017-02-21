@@ -1,4 +1,5 @@
 var bits = [2, 1, 1, 2, 4, 2]
+var bits2 =[2, 1, 1, 2, 3, 2]
 var hits = []
 var last_click = 0;
 
@@ -12,13 +13,13 @@ function judge() {
   // console.log(normalized());
   if(hits.length == bits.length) {
     var n_hits = normalized();
-    if(_.isEqual(n_hits, bits)) {
+    if(_.isEqual(n_hits, bits) || _.isEqual(n_hits, bits)) {
       prompt("Congradurations!", "CHICKEN:大爆射!!!:ATTACK");
     }
   } else if(hits.length > bits.length) {
     while(hits.length > bits.length) hits.shift();
     var n_hits = normalized();
-    if(_.isEqual(n_hits, bits)) {
+    if(_.isEqual(n_hits, bits) || _.isEqual(n_hits, bits)) {
       prompt("Congradurations!", "CHICKEN:大爆射!!!:ATTACK");
     }
   }
